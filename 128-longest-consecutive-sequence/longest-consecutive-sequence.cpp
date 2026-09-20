@@ -8,6 +8,7 @@ public:
         int beststart = 0;
         int bestlength = 0;
         for (int num : seq) {
+            //Checking if num is the start of the sequence
             if (seq.find(num - 1) == seq.end()) {
                 int current = num;
                 int length = 1;
@@ -15,10 +16,7 @@ public:
                     current++;
                     length++;                   
                 }
-                if (length > bestlength) {
-                        bestlength = length;
-                        beststart = num;
-                }
+                bestlength = max(length, bestlength);
             }
         }
         return bestlength;
