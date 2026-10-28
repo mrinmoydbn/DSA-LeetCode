@@ -12,8 +12,8 @@ public:
             return "0";
         } 
         string ans = "";
-        for (string s : arr) {
-            ans += s;
+        for (int i = 0; i < arr.size(); i++) {
+            ans += arr[i];
         }
         return ans;
     }
